@@ -7,21 +7,26 @@
  */
 int main(void)
 {
-char ch;
+int ch;
 int n;
-
-for (n = 48; n <= 57; n++)
+for (ch = 48; ch <= 57; ch++)
 {
-
-putchar(n);
-}
-for (ch = 'a'; ch <= 'f'; ch++)
+for (n = 49; n <= 57; n++)
 {
-
+if (n > ch)
+{
 putchar(ch);
+putchar(n);
+if (ch != 56 || n != 57)
+{
+putchar(44);
+putchar(32);
+}
+}
+}
 }
 
-putchar(10);
+putchar(10); /* this is an ascii code for new line*/
 
 return (0);
 }
